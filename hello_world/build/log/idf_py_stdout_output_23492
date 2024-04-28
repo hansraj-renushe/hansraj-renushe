@@ -1,0 +1,11 @@
+[1/5] cmd.exe /C "cd /D C:\Users\hans\workspace\hello_world\build\esp-idf\esptool_py && python C:/Espressif/frameworks/esp-idf-v5.1.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/hans/workspace/hello_world/build/partition_table/partition-table.bin C:/Users/hans/workspace/hello_world/build/hello_world.bin"
+FAILED: esp-idf/esptool_py/CMakeFiles/app_check_size C:/Users/hans/workspace/hello_world/build/esp-idf/esptool_py/CMakeFiles/app_check_size 
+cmd.exe /C "cd /D C:\Users\hans\workspace\hello_world\build\esp-idf\esptool_py && python C:/Espressif/frameworks/esp-idf-v5.1.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/hans/workspace/hello_world/build/partition_table/partition-table.bin C:/Users/hans/workspace/hello_world/build/hello_world.bin"
+Error: All app partitions are too small for binary hello_world.bin size 0x10cbf0:
+  - Part 'factory' 0/0 @ 0x10000 size 0x100000 (overflow 0xcbf0)
+  - Part 'ota_0' 0/16 @ 0x110000 size 0x100000 (overflow 0xcbf0)
+  - Part 'ota_1' 0/17 @ 0x210000 size 0x100000 (overflow 0xcbf0)
+[2/5] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\hans\workspace\hello_world\build\bootloader\esp-idf\esptool_py && python C:/Espressif/frameworks/esp-idf-v5.1.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/hans/workspace/hello_world/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6810 bytes. 0x7f0 bytes (7%) free.
+ninja: build stopped: subcommand failed.
